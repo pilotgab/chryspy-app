@@ -39,7 +39,7 @@ jobs:
           context: .
           file: docker/Dockerfile
           push: true
-          tags: captaingab/vproapp:${{ github.sha }}
+          tags: captaingab/chrispyimg:${{ github.sha }}
   promote-to-dev-environment:
     runs-on: ubuntu-latest
     needs: docker-build-push

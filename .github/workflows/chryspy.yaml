@@ -20,8 +20,6 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v3
-      - name: Set GitHub SHA label
-        run: echo "github-sha=${{ github.sha }}" >> $GITHUB_ENV
 
       -
         name: Set up QEMU
@@ -43,7 +41,6 @@ jobs:
           file: docker/Dockerfile
           push: true
           tags: |
-            captaingab/chrispyimg:${{ github.sha }}
             captaingab/chrispyimg:latest 
           
      

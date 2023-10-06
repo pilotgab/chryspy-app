@@ -42,7 +42,10 @@ jobs:
           context: .
           file: docker/Dockerfile
           push: true
-          tags: captaingab/chrispyimg:${{ github.sha }}
+          tags: |
+            captaingab/chrispyimg:${{ github.sha }}
+            captaingab/chrispyimg:latest 
+          
      
   promote-to-dev-environment:
     runs-on: ubuntu-latest

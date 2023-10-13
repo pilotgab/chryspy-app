@@ -42,7 +42,7 @@ jobs:
           push: true
           tags: |
             captaingab/chrispyimg:${{ github.sha }}
-            captaingab/chrispyimg:latest 
+          
           
      
   promote-to-dev-environment:

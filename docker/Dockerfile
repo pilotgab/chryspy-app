@@ -6,3 +6,4 @@ COPY . /usr/share/nginx/html
 #testing dockerfile 
 # Expose port 80 for HTTP
 EXPOSE 80
+#

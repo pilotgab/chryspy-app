@@ -1,5 +1,8 @@
-FROM ubuntu:latest
-run apt update && apt install git wget zip unzip apache2 -y
-run cp ./* /var/www/html
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+# Use the nginx image as a base
+FROM nginx:alpine
+
+# Copy website files from the current directory to the nginx html directory
+COPY . /usr/share/nginx/html
+#testing dockerfile 
+# Expose port 80 for HTTP
 EXPOSE 80
